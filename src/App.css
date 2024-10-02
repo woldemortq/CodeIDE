@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,541 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+@font-face {
+  font-family: Inter;
+  src: url(./components/fonts/static/Inter_18pt-Regular.ttf);
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 70%;
+  background-color: black;
+  overflow-x: hidden; 
+}
+
+header {
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 8px;
+}
+
+.logo span {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+li {
+  align-self: center;
+}
+
+.menu {
+  font-family: "Inter";
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+  list-style-type: none;
+  color: #999999;
+  width: 100%;
+}
+
+.menu li:hover {
+  color: white;
+}
+
+.menu button {
+  display: block;
+  border: none;
+  border-radius: 3px;
+  background-color: #eaff96;
+  padding: 6px;
+  font-family: "Inter";
+  color: #151515;
+  font-weight: bold;
+}
+
+.menu button:hover {
+  background-color: #dbf576;
+}
+
+.menu button:active {
+  transform: translate(0em, 0.1em);
+}
+
+.prev {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.prev img {
+  width: 100%;
+  height: auto;
+}
+.prev {
+  position: relative;
+  animation: slideIn 0.5s forwards; 
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%); /* Начальная позиция */
+    opacity: 0; 
+  }
+  to {
+    transform: translateX(0); /* Конечная позиция */
+    opacity: 2; /* Полная непрозрачность */
+  }
+}
+
+ul {
+  padding: 10px 0px 10px;
+  margin: 0;
+  width: 100%;
+}
+
+.colorHead {
+  display: flex;
+  width: 100vw;
+  left: -300px;
+  background-color: #0f0e0e;
+  height: 50px;
+  position: absolute;
+  z-index: -1;
+}
+
+
+.text1 {
+  font-family: "Inter";
+  font-size: 3rem;
+  color: white;
+  list-style-type: none;
+  text-align: center;
+}
+.text2 {
+  font-family: "Inter";
+  font-size: 5rem;
+  font-weight: bolder;
+  color: white;
+  list-style-type: none;
+  text-align: center;
+  width:  60%;
+}
+.text3 {
+  margin-top: 5%;
+  font-family: "Inter";
+  font-size: 1rem;
+  color: #999999;
+  list-style-type: none;
+  text-align: center;
+}
+.main-text {
+  display: grid;
+  margin-top: 5%;
+  place-items: center;
+}
+
+.main-text button {
+  margin-top: 2%;
+  padding: 1%;
+  border-radius: 3px;
+  border: none;
+  background-color: #eaff96;
+  font-family: "Inter";
+  font-weight: bold;
+}
+
+.main-text button:hover {
+  background-color: #dbf576;
+}
+
+.main-text button:active {
+  transform: translate(0em, 0.2em);
+}
+
+.properties {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #999999;
+  list-style-type: none;
+  gap: 5%;
+  font-family: "Inter";
+}
+
+.properties li {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+
+.properties li:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.prop-text {
+  position: relative;
+  margin-top: 30%;
+  text-decoration: none;
+  transition: color 0.5s ease-out;
+}
+
+.prop-text::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.2s ease-out, left 0.2s ease-out;
+}
+
+.prop-text:hover {
+  color: white;
+}
+
+.prop-text:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+hr {
+  width: 55%;
+  margin: 0 auto;
+  border: 1px solid #999999;
+}
+
+.text-no-setup {
+  padding: 5%;
+  display: flex;
+  color: #ffffff;
+  font-family: "Inter";
+  font-weight: lighter;
+  font-size: 1.3rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.john {
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.john img {
+  width: 100%;
+  height: auto;
+}
+
+.code {
+  margin-top: 30%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.code img {
+  width: 100%;
+  height: auto;
+}
+
+.forIos ul {
+  list-style-type: none;
+  font-family: "Inter";
+}
+
+.ios-item {
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  transition: color 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.ios-item:nth-child(1) {
+  font-size: 2rem;
+}
+
+.ios-item:nth-child(2) {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.ios-item:nth-child(3) {
+  color: #999999;
+  padding: 2rem;
+}
+
+.ios-item:nth-child(4) {
+  color: #e3ff73;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-bottom: 10em;
+}
+
+.ios-item:nth-child(4):hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #dbf576;
+  width: 100%;
+  transform: scale(125%);
+  transition: 0.5s ease-in;
+}
+
+.collaboration {
+  display: flex;
+  width: 100%;
+}
+
+.code-container {
+  position: relative;
+  text-align: center;
+  font-family: "Inter";
+  color: white;
+  font-size: 2rem;
+}
+
+.code-container h2,
+h3 {
+  font-weight: lighter;
+  margin: 0;
+  padding-bottom: 2rem;
+}
+
+.code-container h3 {
+  font-size: 1rem;
+  color: #999999;
+}
+
+.man {
+  display: flex;
+  position: absolute;
+}
+
+.man:nth-child(6) {
+  top: 80%;
+  left: 2%;
+  transform: translate(-50%, -50%);
+}
+
+.man:nth-child(2) {
+  top: 80%;
+  left: 105%;
+  transform: translate(-50%, -50%);
+}
+
+.man:nth-child(3) {
+  top: 60%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+}
+
+.man:nth-child(4) {
+  top: 60%;
+  left: 105%;
+  transform: translate(-50%, -50%);
+}
+
+.man:nth-child(5) {
+  top: 60%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+}
+
+.man:nth-child(7) {
+  top: 60%;
+  left: 2%;
+  transform: translate(-50%, -50%);
+}
+
+.blocks-container {
+  display: flex; 
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+.blocks {
+  display: inline-block;
+  position: relative;
+  width: 25%;
+  list-style-type: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  margin: 2%;
+  padding: 5% 0;
+  text-align: center;
+  color: white;
+  background-color: #151515;
+}
+
+.blocks span {
+  color: #999999;
+  font-size: 0.9rem;
+}
+
+
+.js-dev {
+  margin-top: 20%;
+  display: flex;
+  color: white;
+  list-style-type: none;
+  position: relative;
+  justify-content: center;
+  font-family: "Inter";
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.js-dev .background {
+  position: absolute;
+  top: 0;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+
+.others {
+  color: white;
+  font-family: "Inter";
+  font-size: 2rem;
+  list-style-type: none;
+  text-align: center;
+}
+.others p {
+  margin-top: 25%;
+  padding-bottom: 5%;
+  font-weight: lighter;
+}
+
+
+.footer-text {
+  justify-content: center;
+  font-family: "Inter";
+  text-align: center;
+  list-style-type: none;
+  margin-top: 40%;
+}
+
+.text1-footer {
+  color: white;
+  font-size: 2rem;
+  padding-bottom: 2%;
+}
+
+.text2-footer {
+  color: #999999;
+  font-size: 0.9rem;
+  padding-bottom: 2%;
+}
+
+.footer-text button {
+  border: none;
+  border-radius: 3px;
+  background-color: #eaff96;
+  padding: 6px;
+  font-family: "Inter";
+  margin-bottom: 10%;
+  color: #151515;
+  font-weight: bold;
+}
+
+.footer-text button:hover {
+  background-color: #dbf576;
+}
+
+.footer-text button:active {
+  transform: translate(0em, 0.1em);
+}
+
+.footer-icons {
+  display: flex;
+  margin-left: -10%;
+  justify-content: flex-start;
+  position: relative;
+  padding-bottom: 1%;
+}
+
+.footer-icons img {
+  width: 30%;
+  margin-right: -5%;
+}
+
+.footer-icons  .spectr {
+  margin-top: -4%;
+}
+
+.footer-icons .plum {
+  margin-top: 2%;
+}
+
+.footer-icons .hoverboard {
+  margin-top: 5%;
+}
+
+hr {
+  width: 100vw; 
+  margin-left: calc(
+    -50vw + 50%
+  ); 
+  border: #343434 1px solid;
+}
+
+.footer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  font-family: "Inter";
+  margin-top: 5%;
+}
+
+.footer ul {
+  list-style-type: none;
+  color: #999999;
+  font-size: 0.8rem;
+  line-height: 2rem;
+}
+
+
+.links {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  margin-top: 5%;
+}
+
+.social {
+  margin-bottom: 10px; 
+}
+
+.links span {
+  color: #999999;
+  font-family: "Inter";
+  padding-bottom: 5%;
 }
